@@ -1,5 +1,5 @@
 /*
-        ADS1256.h - Arduino Library for communication with Texas Instrument ADS1256 ADC
+        ADS12561.h - Arduino Library for communication with Texas Instrument ADS12561 ADC
         Written by Adien Akhmad, August 2015
 	Modifified  Jan 2019 by Axel Sepulveda for ATMEGA328
 */
@@ -37,7 +37,7 @@
 	#warning  "Oops! Pins for your board are not defined: pinDRDY, pinRST, pinCS"
 #endif
 
-// ADS1256 Register address
+// ADS12561 Register address
 #define ADS1256_RADD_STATUS 0x00
 #define ADS1256_RADD_MUX 0x01
 #define ADS1256_RADD_ADCON 0x02
@@ -50,7 +50,7 @@
 #define ADS1256_RADD_FSC1 0x09
 #define ADS1256_RADD_FSC2 0x0A
 
-// ADS1256 Command
+// ADS12561 Command
 #define ADS1256_CMD_WAKEUP 0x00
 #define ADS1256_CMD_RDATA 0x01
 #define ADS1256_CMD_RDATAC 0x03

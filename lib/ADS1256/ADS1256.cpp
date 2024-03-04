@@ -225,11 +225,11 @@ void ADS1256::begin(unsigned char drate, unsigned char gain, bool buffenable) {
     sendCommand(ADS1256_CMD_SELFCAL);  // perform self calibration
 
     waitDRDY();
-    ;  // wait ADS1256 to settle after self calibration
+    ;  // wait ADS12561 to settle after self calibration
 }
 void ADS1256::offsetCalibration(){
     sendCommand(ADS1256_CMD_SELFOCAL);  // perform offset calibration
-    waitDRDY();  // wait ADS1256 to settle after offset calibration
+    waitDRDY();  // wait ADS12561 to settle after offset calibration
     sendCommand(ADS1256_CMD_SELFGCAL);
     waitDRDY();
 }
@@ -240,7 +240,7 @@ void ADS1256::begin() {
     sendCommand(ADS1256_CMD_SDATAC);  // send out ADS1256_CMD_SDATAC command to stop continous reading mode.
     uint8_t status = readRegister(ADS1256_RADD_STATUS);
     sendCommand(ADS1256_CMD_SELFCAL);  // perform self calibration
-    waitDRDY();   // wait ADS1256 to settle after self calibration
+    waitDRDY();   // wait ADS12561 to settle after self calibration
 }
 
 /*
