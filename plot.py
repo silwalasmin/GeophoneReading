@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Define the data structure format
 data_format = 'iiifff'
 # Open the serial port
-ser = serial.Serial('/dev/ttyUSB0', 115200)  # Replace /dev/ttyUSB0 with the serial port where your ESP32 is connected.
+ser = serial.Serial('/dev/ttyUSB0', 9600)  # Replace /dev/ttyUSB0 with the serial port where your ESP32 is connected.
 starttime = time.perf_counter_ns()
 
 
@@ -76,4 +76,4 @@ while True:
     update_plot(ax, lines, x_data, y_data)
 
     # Control the update rate
-    time.sleep(0.001)  # Adjust the sleep duration as needed
+    time.sleep(0.01)  # Adjust the sleep duration as needed

@@ -34,7 +34,7 @@ geophoneDATA sensorDATA;
 void setup()
 {
     adc = new ADS1256(clockMHZ,vRef,false);
-    Serial.begin(115200);
+    Serial.begin(9600);
     Serial.println("Starting ADC");
 
     sensorDATA.node_ID=NODEID;
