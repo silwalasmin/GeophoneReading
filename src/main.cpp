@@ -48,13 +48,14 @@ void setup()
     adc->offsetCalibration();
 
     Serial.println("ADC Started");
-    adc->setChannel(0,1);
+
 }
 int calculateChecksum(geophoneDATA geoReadings);
 void serializeStruct(Stream &stream, const void *geoReadings, size_t size);
 
 void loop()
 {
+    adc->setChannel(0,1);
     adc->waitDRDY(); // wait for DRDY to go low before next register read
     sensorDATA.data[0]=adc->readCurrentChannel(); // read as voltage according to gain and vref
 
